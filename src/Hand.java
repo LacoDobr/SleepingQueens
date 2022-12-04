@@ -20,7 +20,7 @@ public class Hand {
     }
 
     public HandPosition HasCardOfType(CardType type) {
-        //for (HandPosition x : )
+
         return null;
     }
 

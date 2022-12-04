@@ -13,4 +13,14 @@ public class GameState {
     public Map<HandPosition, Optional<Card>> cards;
     public Map<AwokenQueenPosition, Queen> awokenQueens;
     public List<Card> cardsDiscardedLastTurn;
+
+    public GameState(int numberOfPlayers, int onTurn, Set<SleepingQueenPosition> sleepingQueens, Map<HandPosition, Optional<Card>> cards,
+                     Map<AwokenQueenPosition, Queen> awokenQueens, List<Card> cardsDiscardedLastTurn) {
+        this.numberOfPlayers = numberOfPlayers;
+        this.onTurn = onTurn;
+        this.sleepingQueens = sleepingQueens;
+        this.cards = cards;
+        this.awokenQueens = awokenQueens;
+        this.cardsDiscardedLastTurn = cardsDiscardedLastTurn;
+    }
 }
