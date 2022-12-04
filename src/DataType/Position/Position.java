@@ -1,6 +1,6 @@
 package DataType.Position;
 
-import java.util.Optional;
+import java.util.*;
 
 public class Position {
     private Optional<SleepingQueenPosition> sqp;
