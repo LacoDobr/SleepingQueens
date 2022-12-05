@@ -23,4 +23,8 @@ public class GameState {
         this.awokenQueens = awokenQueens;
         this.cardsDiscardedLastTurn = cardsDiscardedLastTurn;
     }
+
+    public String toString() {
+        return "numberOfPlayers:"+numberOfPlayers+" onTurn:"+onTurn+" ";
+    }
 }
