@@ -7,10 +7,15 @@ public class Position {
     private Optional<AwokenQueenPosition> aqp;
     private Optional<HandPosition> hp;
 
-    public Position(Optional<SleepingQueenPosition> sqp, Optional<AwokenQueenPosition> aqp, Optional<HandPosition> hp){
-        this.sqp = sqp;
-        this.aqp = aqp;
-        this.hp = hp;
+    public Position(SleepingQueenPosition sqp) {
+        this.sqp = Optional.of(sqp);
+    }
+
+    public Position(AwokenQueenPosition aqp) {
+        this.aqp = Optional.of(aqp);
+    }
+    public Position(HandPosition hp) {
+        this.hp = Optional.of(hp);
     }
 
     public Optional<SleepingQueenPosition> getSqp() {
