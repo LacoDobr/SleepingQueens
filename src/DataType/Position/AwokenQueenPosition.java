@@ -1,6 +1,6 @@
 package DataType.Position;
 
-public class AwokenQueenPosition {
+public class AwokenQueenPosition implements Position {
     private int cardIndex;
     private int playerIndex;
 
@@ -9,6 +9,7 @@ public class AwokenQueenPosition {
         this.playerIndex = playerIndex;
     }
 
+    @Override
     public int getCardIndex() {
         return cardIndex;
     }

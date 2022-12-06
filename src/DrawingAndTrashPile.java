@@ -56,6 +56,15 @@ public class DrawingAndTrashPile {
         return draw;
     }
 
+    public List<Card> drawStartingDeck() {
+        List<Card> draw = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            draw.add(drawingPile.get(0));
+            drawingPile.remove(0);
+        }
+        return draw;
+    }
+
     public void newTurn() {
         cardsDiscardedThisTurn.clear();
     }

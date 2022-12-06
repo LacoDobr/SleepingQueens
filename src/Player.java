@@ -18,7 +18,7 @@ public class Player {
     }
 
     public void play(List<Position> cards) {
-        for (int i = 0; i < cards.size(); i++) {
+        /*for (int i = 0; i < cards.size(); i++) {
             Position card = cards.get(i);
             if (card.getSqp().isPresent()) {
 
@@ -28,6 +28,6 @@ public class Player {
                 int cardIndex = card.getHp().orElse(null).getCardIndex();
 
             }
-        }
+        }*/
     }
 }

@@ -1,9 +1,12 @@
 package DataType.Position;
 
-import java.util.*;
+//import java.util.*;
 
-public class Position {
-    private Optional<SleepingQueenPosition> sqp;
+public interface Position {
+
+    int getCardIndex();
+
+    /*private Optional<SleepingQueenPosition> sqp;
     private Optional<AwokenQueenPosition> aqp;
     private Optional<HandPosition> hp;
 
@@ -28,5 +31,5 @@ public class Position {
 
     public Optional<HandPosition> getHp() {
         return hp;
-    }
+    }*/
 }
