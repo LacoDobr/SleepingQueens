@@ -9,19 +9,12 @@ public class GameAdaptor implements GamePlayerInterface {
 
     private List<String> players;
     private Game game;
+    private GameObservable gameObservable;
 
-    public GameAdaptor(List<String> playersNicks, String firstOnTurn) {
-        if ((playersNicks.size() >= 2) &&(playersNicks.size() <= 5)) {
-            players = new ArrayList<>();
-            int firstOnTurnIdx = 0;
-            for (int i = 0; i < playersNicks.size(); i++) {
-                players.add(playersNicks.get(i));
-                if (playersNicks.get(i).equals(firstOnTurn)) {
-                    firstOnTurnIdx = i;
-                }
-            }
-            game = new Game(firstOnTurnIdx, players.size());
-        }
+    public GameAdaptor(GameObservable gameObservable, String firstOnTurn) {
+        this.gameObservable = gameObservable;
+        players = new ArrayList<>(gameObservable.getPlayers());
+        game = new Game(players.indexOf(firstOnTurn), players.size());
     }
 
     @Override

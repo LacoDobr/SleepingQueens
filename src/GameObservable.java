@@ -31,4 +31,8 @@ public class GameObservable {
             obs.notify(message.toString());
         }
     }
+
+    public List<String> getPlayers() {
+        return players;
+    }
 }

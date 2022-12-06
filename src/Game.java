@@ -16,9 +16,9 @@ public class Game {
     public Game(int onTurn, int numberOfPlayers) {
         Set<SleepingQueenPosition> sleepingQueens = new HashSet<>();
         for (int i = 1; i <= 12; i++) {
-            SleepingQueenPosition temp = new SleepingQueenPosition(i);
-            sleepingQueens.add(temp);
+            sleepingQueens.add(new SleepingQueenPosition(i));
         }
+
         Map<HandPosition, Optional<Card>> cards = new HashMap<>();
         for (int i = 0; i < numberOfPlayers; i++) {
             for (int j = 0; j < 5; j++) {
