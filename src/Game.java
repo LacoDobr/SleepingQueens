@@ -15,9 +15,6 @@ public class Game {
     public Game(int onTurn, int numberOfPlayers) {
         //prerobit do osobitnej classy
         Set<SleepingQueenPosition> sleepingQueens = new HashSet<>();
-        for (int i = 1; i <= 12; i++) {
-            sleepingQueens.add(new SleepingQueenPosition(i));
-        }
 
         drawingAndTrashPile = new DrawingAndTrashPile();
         Map<HandPosition, Optional<Card>> cards = new HashMap<>();

@@ -25,25 +25,21 @@ public class GameAdaptor implements GamePlayerInterface {
 
             while (scanner.hasNext()) {
                 String command = scanner.next();
-                Position position;
                 switch (command.charAt(0)) {
                     case 'h':
                         HandPosition handPosition = new HandPosition(Character.getNumericValue(command.charAt(1)), players.indexOf(player));
-                        position = new Position(handPosition);
+                        cardsList.add(handPosition);
                         break;
                     case 'a':
                         AwokenQueenPosition awokenQueenPosition = new AwokenQueenPosition(Character.getNumericValue(command.charAt(2)), Character.getNumericValue(command.charAt(1)));
-                        position = new Position(awokenQueenPosition);
+                        cardsList.add(awokenQueenPosition);
                         break;
                     case 's':
                         command = command.substring(1);
                         SleepingQueenPosition sleepingQueenPosition = new SleepingQueenPosition(Integer.parseInt(command));
-                        position = new Position(sleepingQueenPosition);
+                        cardsList.add(sleepingQueenPosition);
                         break;
-                    default:
-                        position = null;
                 }
-                cardsList.add(position);
             }
             game.play(players.indexOf(player), cardsList);
             return "Success";
