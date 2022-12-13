@@ -55,7 +55,7 @@ public class Player {
             }
         }
 
-        Map<Integer, Queen> queens = new HashMap<>();
+        Map<Integer, Queen> queens = new LinkedHashMap<>();
         for (Position position : awokenQueens.getQueens().keySet()) {
             queens.put(position.getCardIndex(), awokenQueens.getQueens().get(position));
         }

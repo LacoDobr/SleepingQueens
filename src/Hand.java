@@ -30,7 +30,7 @@ public class Hand {
 
     public Map<HandPosition, Card> removePickedCardsAndRedraw() {
         cards.removeAll(pickedCards);
-        Map<HandPosition, Card> x = new HashMap<>();
+        Map<HandPosition, Card> x = new LinkedHashMap<>();
         List<Card> redraw = new ArrayList<>(drawingAndTrashPile.discardAndDraw(pickedCards));
         for (int i = 0; i < redraw.size(); i++) {
             x.put(new HandPosition(i + cards.size(), playerIdx), redraw.get(i));

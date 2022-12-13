@@ -12,7 +12,7 @@ public class AwokenQueens implements QueenCollection {
     private Stack<Position> emptySpaces;
 
     public AwokenQueens(int playerIdx) {
-        awokenQueens = new HashMap<>();
+        awokenQueens = new LinkedHashMap<>();
         this.playerIdx = playerIdx;
         emptySpaces = new Stack<>();
     }

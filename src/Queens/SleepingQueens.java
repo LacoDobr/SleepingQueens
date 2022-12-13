@@ -12,7 +12,7 @@ public class SleepingQueens implements QueenCollection {
 
     public SleepingQueens() {
         emptyPosition = new Stack<>();
-        sleepingQueens = new HashMap<>();
+        sleepingQueens = new LinkedHashMap<>();
         List<Integer> points = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
             points.add(5);
