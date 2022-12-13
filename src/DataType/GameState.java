@@ -7,12 +7,12 @@ import DataType.Position.SleepingQueenPosition;
 import java.util.*;
 
 public class GameState {
-    public int numberOfPlayers;
+    private int numberOfPlayers;
     public int onTurn;
-    public Set<SleepingQueenPosition> sleepingQueens;
-    public Map<HandPosition, Optional<Card>> cards;
-    public Map<AwokenQueenPosition, Queen> awokenQueens;
-    public List<Card> cardsDiscardedLastTurn;
+    private Set<SleepingQueenPosition> sleepingQueens;
+    private Map<HandPosition, Optional<Card>> cards;
+    private Map<AwokenQueenPosition, Queen> awokenQueens;
+    private List<Card> cardsDiscardedLastTurn;
 
     public GameState(int numberOfPlayers, int onTurn, Set<SleepingQueenPosition> sleepingQueens, Map<HandPosition, Optional<Card>> cards,
                      Map<AwokenQueenPosition, Queen> awokenQueens, List<Card> cardsDiscardedLastTurn) {

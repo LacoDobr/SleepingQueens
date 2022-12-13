@@ -10,4 +10,8 @@ public class PlayerState {
         this.cards = cards;
         this.awokenGueens = awokenGueens;
     }
+
+    public Map<Integer, Optional<Card>> getCards() {
+        return cards;
+    }
 }

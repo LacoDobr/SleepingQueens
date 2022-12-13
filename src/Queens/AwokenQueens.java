@@ -9,7 +9,7 @@ import java.util.*;
 public class AwokenQueens implements QueenCollection {
     private Map<Position, Queen> awokenQueens;
     private final int playerIdx;
-    public Stack<Position> emptySpaces;
+    private Stack<Position> emptySpaces;
 
     public AwokenQueens(int playerIdx) {
         awokenQueens = new HashMap<>();
