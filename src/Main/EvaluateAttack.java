@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Position.HandPosition;
 import DataType.Position.Position;
 import Enumeration.CardType;
@@ -11,8 +13,8 @@ public class EvaluateAttack {
     private QueenCollection queenCollection;
     private MoveQueen moveQueen;
 
-    public EvaluateAttack(CardType defeceCardType, MoveQueen moveQueen) {
-        this.defenseCardType = defeceCardType;
+    public EvaluateAttack(List<Player> players, MoveQueen moveQueen) {
+        this.players = players;
         this.moveQueen = moveQueen;
     }
 

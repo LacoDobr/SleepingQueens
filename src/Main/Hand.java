@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Card;
 import DataType.Position.HandPosition;
 import Enumeration.CardType;
@@ -22,7 +24,7 @@ public class Hand {
             return Optional.empty();
         } else {
             for (HandPosition x : positions) {
-                pickedCards.add(cards.get(x.getCardIndex() - 1));
+                pickedCards.add(cards.get(x.getCardIndex()));
             }
             return Optional.ofNullable(pickedCards);
         }

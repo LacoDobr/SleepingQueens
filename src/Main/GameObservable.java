@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.GameState;
 
 import java.util.*;

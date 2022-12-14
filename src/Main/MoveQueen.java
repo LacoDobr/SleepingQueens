@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Position.AwokenQueenPosition;
 import DataType.Position.Position;
 import DataType.Position.SleepingQueenPosition;
@@ -25,22 +27,19 @@ public class MoveQueen {
         if (targetQueen instanceof AwokenQueenPosition) {
             int targetIdx = ((AwokenQueenPosition) targetQueen).getPlayerIndex();
             Optional<Queen> queen = players.get(targetIdx).getAwokenQueens().removeQueen(targetQueen);
+
             if (queen.isPresent()) {
                 queenCollection.addQueen(queen.get());
                 return true;
-            } else {
-                return false;
             }
         } else if (targetQueen instanceof SleepingQueenPosition) {
+
             Optional<Queen> queen = sleepingQueens.removeQueen(targetQueen);
             if (queen.isPresent()) {
                 queenCollection.addQueen(queen.get());
                 return true;
-            } else {
-                return false;
             }
-        } else {
-            return false;
         }
+        return false;
     }
 }

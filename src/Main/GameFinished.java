@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Queen;
 
 import java.util.*;

@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Position.AwokenQueenPosition;
 import DataType.Position.HandPosition;
 import DataType.Position.Position;

@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Card;
 import Shuffle.ShuffleVersions;
 import Shuffle.VersionOne;
@@ -20,7 +22,7 @@ public class DrawingAndTrashPile {
         for (int i = 0; i < 4; i++) {
             drawingPile.add(new Card(CardType.Knight, 0));
             drawingPile.add(new Card(CardType.SleepingPotion, 0));
-            for (int j = 1; j <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
                 drawingPile.add(new Card(CardType.Number, j));
             }
         }
@@ -70,7 +72,7 @@ public class DrawingAndTrashPile {
     }
 
     public List<Card> getCardsDiscardedThisTurn() {
-        return null;
+        return cardsDiscardedThisTurn;
     }
 
     public void setShuffleVersion(ShuffleVersions shuffleVersion) {

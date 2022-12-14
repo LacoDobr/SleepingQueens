@@ -1,3 +1,5 @@
+package Main;
+
 import DataType.Card;
 import DataType.PlayerState;
 import DataType.Position.AwokenQueenPosition;
@@ -21,9 +23,10 @@ public class Player {
     private MoveQueen moveQueen;
 
 
-    public Player(int playerIdx, Hand hand) {
+    public Player(int playerIdx, Hand hand, SleepingQueens sleepingQueens) {
         this.playerIdx = playerIdx;
         this.hand = hand;
+        this.sleepingQueens = sleepingQueens;
         awokenQueens = new AwokenQueens(playerIdx);
         uptadePlayerState();
     }

@@ -14,6 +14,7 @@ public class SleepingQueens implements QueenCollection {
         emptyPosition = new Stack<>();
         sleepingQueens = new LinkedHashMap<>();
         List<Integer> points = new ArrayList<>();
+
         for (int i = 0; i < 4; i++) {
             points.add(5);
             points.add(10);
@@ -37,7 +38,13 @@ public class SleepingQueens implements QueenCollection {
 
     @Override
     public Optional<Queen> removeQueen(Position position) {
-        Optional<Queen> removedQueen = Optional.ofNullable(sleepingQueens.remove(position));
+        Optional<Queen> removedQueen = Optional.empty();
+        for (Position pos : sleepingQueens.keySet()) {
+            if (pos.getCardIndex() == position.getCardIndex()) {
+                removedQueen = Optional.ofNullable(sleepingQueens.remove(pos));
+                break;
+            }
+        }
         if (removedQueen.isPresent()) {
             emptyPosition.push(position);
         }
